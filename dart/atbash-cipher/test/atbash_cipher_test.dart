@@ -42,7 +42,8 @@ void main() {
       }, skip: true);
 
       test('encode all the letters', () {
-        final result = atbashCipher.encode("The quick brown fox jumps over the lazy dog.");
+        final result =
+            atbashCipher.encode("The quick brown fox jumps over the lazy dog.");
         expect(result, equals("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"));
       }, skip: true);
     });
@@ -54,7 +55,8 @@ void main() {
       }, skip: true);
 
       test('decode a sentence', () {
-        final result = atbashCipher.decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v");
+        final result =
+            atbashCipher.decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v");
         expect(result, equals("anobstacleisoftenasteppingstone"));
       }, skip: true);
 
@@ -64,7 +66,8 @@ void main() {
       }, skip: true);
 
       test('decode all the letters', () {
-        final result = atbashCipher.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt");
+        final result =
+            atbashCipher.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt");
         expect(result, equals("thequickbrownfoxjumpsoverthelazydog"));
       }, skip: true);
 

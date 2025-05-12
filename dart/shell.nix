@@ -23,7 +23,7 @@ pkgs.mkShell rec {
 
     function fok() { read -p "$1 (y/N): " && [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]] }
     
-    function code_here() {
+    function ch() {
       nohup code --disable-gpu ./ >/dev/null 2>&1 && echo;      
     }
 
