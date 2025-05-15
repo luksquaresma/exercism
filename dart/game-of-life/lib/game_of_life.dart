@@ -1,6 +1,10 @@
 class GameOfLife {
   List<List<int>> matrix_data;
 
+  List<List<int>> matrix() {
+    return this.matrix_data;
+  }
+
   List<List<int>> border(List<List<int>> mat) {
     return [
       ...[
@@ -45,23 +49,11 @@ class GameOfLife {
     return mat.map((l) => l.map((e) => (e ? 1 : 0)).toList()).toList();
   }
 
-  void tick() {
-    if (this.matrix_data != []) {
-      var mat = border(this.matrix_data);
+  GameOfLife(this.matrix_data);
 
-      // var sums = mat.sublist(1, mat.length - 1).asMap().forEach((li, l) => l
-      //     .sublist(1, mat.length - 1)
-      //     .asMap()
-      //     .forEach((ei, e) => mat
-      //         .sublist(li - 1, li + 1)
-      //         .expand((lines) => lines.sublist(ei - 1, ei + 1))
-      //         .reduce((value, element) => value + element)));
-      //   (l, li) => l.sublist(1, mat.length - 1).indexed.map(
-      //     (e) => mat
-      //     .sublist(l.$1 - 1, l.$1 + 1)
-      //     .expand((lines) => lines.sublist(e.$1 - 1, e.$1 + 1))
-      //     .reduce((value, element) => value + element)))
-      // .toList();
+  void tick() {
+    if (this.matrix_data.isNotEmpty) {
+      var mat = border(this.matrix_data);
 
       var sums = mat
           .sublist(1, mat.length - 1)
@@ -87,25 +79,4 @@ class GameOfLife {
       ];
     }
   }
-
-  List<List<int>> matrix() {
-    return this.matrix_data;
-  }
-
-  GameOfLife(this.matrix_data);
 }
-
-// return [
-//   for (var (i, l) matrix.indexed)
-//   [
-
-//   ]
-// ]
-
-// l.sublist(1, l.length - 1).indexed().map(
-//   (ei, e) => mat.sublist(li - 1, li + 2).expand((sub_line) => sub_line)
-// )
-
-// - Any live cell with two or three live neighbors lives on.
-// - Any dead cell with exactly three live neighbors becomes a live cell.
-// - All other cells die or stay dead.
