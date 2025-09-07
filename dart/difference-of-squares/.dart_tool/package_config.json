@@ -296,8 +296,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2025-05-15T01:31:17.554707Z",
   "generator": "pub",
-  "generatorVersion": "3.7.2",
+  "generatorVersion": "3.8.2",
   "pubCache": "file:///home/luks/.pub-cache"
 }

@@ -16,6 +16,8 @@ pkgs.mkShell rec {
   buildInputs = with unstable; [
     dart
     exercism
+    claude-code
+    gemini-cli
   ];
 
   shellHook = ''
