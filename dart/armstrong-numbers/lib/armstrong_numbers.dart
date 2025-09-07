@@ -6,6 +6,6 @@ class ArmstrongNumbers {
         n.split("").fold(
             0,
             (value, element) =>
-                value + pow(int.parse(element), n.length).toInt()));
+                value + pow(int.parse(element), n.length).toInt().clamp(0,115132219018763992565095597973971522401)));
   }
 }
